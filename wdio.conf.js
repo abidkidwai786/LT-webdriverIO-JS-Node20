@@ -2,6 +2,18 @@ exports.config = {
 
     runner: 'local',//
 
+    services: [
+    [
+        "lambdatest",
+          {
+            tunnel: false,
+            lambdatestOpts: {
+            logFile: "tunnel.log"
+            }
+          }
+        ]
+    ],
+
     hostname: 'hub.lambdatest.com',
     port: 80,
     path: '/wd/hub',
